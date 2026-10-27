@@ -1,15 +1,39 @@
-# SigmaOS-screen-saver
+    # SigmaOS-screen-saver
 
-Part of the SigmaOS multi-repository architecture.
+    Lock screen & idle screensaver
 
-## Principles
-- MODULARITY: Single responsibility per repository
-- LOOSE COUPLING: Minimal dependencies between repos
-- INTERFACE SEGREGATION: Clear, focused public APIs
-- DETERMINISTIC TESTING: Comprehensive test coverage
+    Part of the **SigmaOS** sovereign operating-system ecosystem — a multi-repository
+    distribution modelled on Linux Mint and Omarchy Linux. See the parent
+    [`SigmaOS`](https://github.com/AaryanSinghChauhan09/SigmaOS) repository for the
+    full component index.
 
-## License
-SPDX-License-Identifier: GPL-3.0-or-later
+    ## Upstream inspirations
+    - https://github.com/linuxmint/cinnamon-screensaver
 
-## Copyright
-Copyright (C) 2026 SigmaOS Project
+    ## Design principles applied
+    - **Defensive Programming**
+- **Fail-Fast**
+- **Least Astonishment**
+- **KISS**
+- **Separation of Concerns**
+- **Deterministic Testing**
+
+    ## Usage
+    Verbs: `lock, idle, theme, status`
+
+    ```
+    $ sigma-screensaver lock                 # prints the lock plan (dry-run)
+$ sigma-screensaver idle --delay 300 --lock on
+$ sigma-screensaver theme --list
+$ sigma-screensaver status
+
+    ```
+
+    ## Build & test
+    ```
+    make build
+    make test
+    ```
+
+    ## Licence
+    GNU General Public License v3.0 (FOSS).
